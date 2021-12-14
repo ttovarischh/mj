@@ -7,7 +7,7 @@
 .preloader {
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +59,7 @@ body {
   background-color: black;
   padding: 30px 4vw 60px 4vw;
   background-size: auto;
-  cursor: none; }
+  overflow: auto; }
 
 .portalsection {
   height: 41vw;
@@ -126,9 +126,59 @@ body {
   width: 38vw;
   background: url("../images/cycle1.svg");
   background-size: contain;
-  background-repeat: no-repeat;
-  animation: cycle1 5s ease-in-out infinite;
-  transform-origin: 52.5% 49.5%; }
+  background-repeat: no-repeat; }
+
+#area {
+  display: inline-block;
+  /* background-color: red; */
+  width: 33vw;
+  /* opacity: 0.5; */
+  position: absolute;
+  left: 5%;
+  top: 12%; }
+
+#area-2 {
+  display: inline-block;
+  /* background-color: red; */
+  /* opacity: 0.5; */
+  width: 34vw;
+  position: absolute;
+  top: 32%;
+  left: 8%; }
+
+#man-half {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  height: 100%; }
+
+#boy-half {
+  /* background: white; */
+  position: relative;
+  width: 49%;
+  height: 100%;
+  display: inline-block; }
+
+#path, #path-2 {
+  stroke-dasharray: 11;
+  stroke-width: 2px; }
+
+.final_container {
+  width: 81.9vw;
+  height: 37.5vw;
+  position: relative;
+  background: url("../images/mappic.png");
+  background-position: center center;
+  background-size: cover;
+  border-radius: 25px;
+  border: 2px solid white; }
+
+.invisible {
+  position: absolute;
+  width: 82.78vw;
+  height: 37.5vw;
+  top: 0;
+  left: 0; }
 
 @keyframes cycle1 {
   0% {
@@ -144,7 +194,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   animation: cycle1 3s ease-in-out infinite;
-  transform-origin: 52.8% 48.5%; }
+  transform-origin: 52.8% 48.3%; }
 
 @keyframes cycle2 {
   0% {
@@ -555,7 +605,7 @@ h1 {
   /* horizontal spritesheet - image from http://preloaders.net */
   background-repeat: repeat-x; }
 
-#spritetarget3 {
+#animatedcard {
   width: 25vw;
   height: 25vw;
   background-size: cover;
@@ -575,10 +625,11 @@ h1 {
   position: relative;
   border-radius: 25px;
   border: 2px solid white;
-  width: 70%; }
-
-.z p {
-  padding-bottom: 40px; }
+  width: 70%;
+  height: 414px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .card {
   width: 20.42vw;
@@ -593,6 +644,14 @@ h1 {
     margin-right: 22px; }
   .card:last-of-type {
     margin-right: 0px; }
+  .card:hover .calm {
+    opacity: 0.5; }
+  .card:hover .child {
+    opacity: 0.5; }
+  .card:hover .balance {
+    opacity: 0.5; }
+  .card:hover .dark {
+    opacity: 0.5; }
   .card .calm {
     background-image: url("../images/mech.png");
     width: 87%;
@@ -649,7 +708,7 @@ h1 {
 .footer {
   bottom: -1.98vw;
   position: absolute;
-  width: 100%;
+  width: 91%;
   height: 57px; }
   .footer .upper_second_container {
     position: relative;
@@ -670,22 +729,26 @@ h1 {
     margin-left: 1.60vw; }
 
 .insta {
-  background-image: url("../images/insta.svg"); }
+  background-image: url("../images/insta.svg");
+  background-size: contain; }
   .insta:hover {
     opacity: 0.5; }
 
 .fb {
+  background-size: contain;
   background-image: url("../images/fb.svg"); }
   .fb:hover {
     opacity: 0.5; }
 
 .vk {
+  background-size: contain;
   background-image: url("../images/vk.svg"); }
   .vk:hover {
     opacity: 0.5; }
 
 .yt {
   margin-right: 1.60vw;
+  background-size: contain;
   background-image: url("../images/yt.svg"); }
   .yt:hover {
     opacity: 0.5; }
@@ -710,7 +773,7 @@ h1 {
 .upper_container {
   top: 0px;
   position: absolute;
-  width: 100%;
+  width: 91%;
   height: 57px; }
   .upper_container .upper_second_container {
     position: relative;
