@@ -135,15 +135,15 @@ $(document).mousemove(function(e) {
 }
 
 $(".normal").css({
-left:e.pageX - 4,
-top:e.pageY - 5
+left:e.clientX - 4,
+top:e.clientY - 5
 });
 $(".hoverc").css({
-left:e.pageX - 10,
-top:e.pageY - 15
+left:e.clientX - 10,
+top:e.clientY - 15
 });
 $(".moveme").css({
-left:e.pageX - 10,
-top:e.pageY - 15
+left:e.clientX - 10,
+top:e.clientY - 15
 });
 });

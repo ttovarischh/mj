@@ -112,7 +112,7 @@ body {
 .cursor {
   display: block;
   pointer-events: none;
-  position: absolute;
+  position: fixed;
 }
 .normal {
   transition: background-color 0.5s ease;
