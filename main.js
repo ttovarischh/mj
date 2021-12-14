@@ -21,9 +21,15 @@ image.onload = function () {
     , 3000);
 };
 
-
 $(".portal").click(function() {
-  $(".portalsection").slideToggle("none");
+  $(".portal_seq").toggleClass("action");
+  $(".portal_seq").toggleClass("still");
+  setTimeout(function()
+      {
+        $(".portalsection").slideToggle("none");
+    }
+  , 1000);
+
 });
 
 $(".headercont").click(function() {
@@ -93,62 +99,9 @@ $( ".type" ).click(function() {
   }
 });
 
-
-// $( ".card" ).click(function() {
-//   $('.openup').slideToggle(function() {
-//     if ($(this).is(':visible'))
-//         $(this).css('display','flex');
-//     });
-// });
-//
-// $( ".cross" ).click(function() {
-//   $('.openup').slideToggle(function() {
-//     if ($(this).is(':visible'))
-//         $(this).css('display','flex');
-//     });
-// });
-//
-//
-// $( ".toy" ).click(function() {
-//   $('#child').slideToggle('medium', function() {
-//     if ($(this).is(':visible'))
-//         $(this).css('display','flex');
-//     });
-// });
-// $( ".crosschild" ).click(function() {
-//   $('#child').slideToggle('medium', function() {
-//     if ($(this).is(':visible'))
-//         $(this).css('display','flex');
-//     });
-// });
-//
-//
-// $( ".organic" ).click(function() {
-//   $('#balance').slideToggle('medium', function() {
-//     if ($(this).is(':visible'))
-//         $(this).css('display','flex');
-//     });
-// });
-// $( ".crossbalance" ).click(function() {
-//   $('#balance').slideToggle('medium', function() {
-//     if ($(this).is(':visible'))
-//         $(this).css('display','flex');
-//     });
-// });
-//
-//
-// $( ".type" ).click(function() {
-//   $('#dark').slideToggle('medium', function() {
-//     if ($(this).is(':visible'))
-//         $(this).css('display','flex');
-//     });
-// });
-// $( ".crossdark" ).click(function() {
-//   $('#dark').slideToggle('medium', function() {
-//     if ($(this).is(':visible'))
-//         $(this).css('display','flex');
-//     });
-// });
+  $( ".texture" ).click(function() {
+    $('audio')[0].play();
+  });
 
 
 $(document).mousemove(function(e) {
@@ -170,7 +123,9 @@ $(document).mousemove(function(e) {
   } else if (eq2) {
    $("body").css("background-color","white");
   } else if (eq3) {
+
     $("body").css("background-color","red");
+    // $(".texture").removeClass("none");
   } else if (eq4) {
     $("body").css("background-color","green");
   }

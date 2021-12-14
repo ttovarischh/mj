@@ -46,7 +46,7 @@
                 <div id="player"></div>
               </div>
               <div class="text a">
-                <p>Сложно назвать видеоряд историей&nbsp;&mdash; это скорее траектория. Траектория взрослого, пытающегося подавить в&nbsp;себе тьму, и&nbsp;ребёнка, желающего понять, что это такое.   Их&nbsp;пути не&nbsp;совсем линейны: взрослый перепроходит один участок пути раз за&nbsp;разом. Его дорога длинная и&nbsp;сложная. Мальчику, наоборот, стоит лишь сделать шаг: но&nbsp;это и&nbsp;пугает.<br><br>В&nbsp;то&nbsp;же время все самое важное происходит скомкано, стремительно и&nbsp;жестоко&nbsp;&mdash; как и&nbsp;бывает обычно. Герои видео принимают друг друга, и&nbsp;борьба оканчивается. Однако так происходит не&nbsp;у&nbsp;всех и&nbsp;не&nbsp;всегда.</p>
+                <p>Сложно назвать видеоряд историей&nbsp;&mdash; это скорее траектория. Траектория взрослого, пытающегося подавить в&nbsp;себе тьму, и&nbsp;ребёнка, желающего понять, что это такое. Их&nbsp;пути не&nbsp;совсем линейны: взрослый перепроходит один участок пути раз за&nbsp;разом. Его дорога длинная и&nbsp;сложная. Мальчику, наоборот, стоит лишь сделать шаг: но&nbsp;это и&nbsp;пугает.<br><br>В&nbsp;то&nbsp;же время все самое важное происходит скомкано, стремительно и&nbsp;жестоко&nbsp;&mdash; как и&nbsp;бывает обычно. Герои видео принимают друг друга, и&nbsp;борьба оканчивается. Однако так происходит не&nbsp;у&nbsp;всех и&nbsp;не&nbsp;всегда.</p>
               </div>
             </div>
           </div>
@@ -70,6 +70,9 @@
                   </svg>
                 </div>
               </div>
+
+              <div class="from texture none"></div>
+
             </div>
             <div class="text b">
               <p>Сложно назвать видеоряд историей — это скорее траектория. Траектория взрослого, пытающегося подавить в себе тьму, и ребёнка, желающего понять, что это такое.   Их пути не совсем линейны: взрослый перепроходит один участок пути раз за разом. Его дорога длинная и сложная. Мальчику, наоборот, стоит лишь сделать шаг: но это и пугает. В то же время все самое важное происходит скомкано, стремительно и жестоко — как и бывает обычно. Герои видео принимают друг друга, и борьба оканчивается. Однако так происходит не у всех и не всегда.</p>
@@ -88,6 +91,8 @@
                 </div>
               </div>
               <div class="portal">
+                <div class="portal_seq still"></div>
+                <!-- <div class="portal_seq action"></div> -->
 
               </div>
               <div class="model man">
@@ -290,7 +295,7 @@
                   </div>
                 </div>
 
-                <div class="download">
+                <a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf"><div class="download">
                   <div class="heh"></div>
                   <h3><span class="diff">С</span>качать <span class="diff">И</span>нструкцию</h3>
                   <div class="heh"></div>
@@ -298,6 +303,7 @@
                 <p class="more"></p>
               </div>
             </div>
+            </a>
 
             <a href="https://www.mujuice.com/" target=”_blank”>
               <div class="logobox"></div>
@@ -344,9 +350,26 @@
           </div>
         </div>
 
+        <div class="side">
+          <div class="rotate date">
+            <h2>16/12/21</h2>
+          </div>
+        </div>
+        <div class="side" id="youth">
+          <div class="rotate date">
+            <h2>youth</h2>
+          </div>
+        </div>
+
         <div class="rotate artist">
           <h2>mujuice</h2>
         </div>
+
+        <div class="rotate artist" id="art">
+          <h2>art</h2>
+        </div>
+
+
 
       </div>
 
@@ -358,6 +381,10 @@
     <div class="cursor normal">
 
     </div>
+
+    <audio id="mysoundclip" preload="auto">
+      <source src="./sound.mp3"></source>
+  </audio>
 
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>

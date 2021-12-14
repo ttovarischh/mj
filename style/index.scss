@@ -54,14 +54,38 @@ h2 {
   position: absolute;
   transform: rotate(-90deg);
   transform-origin: 0 0;
-  left: 0;
 }
+.side {
+  position: absolute;
+  // background-color: blue;
+  display: flex;
+  right: 0;
+  top: 300px;
+}
+#youth {
+  top: 47%;
+}
+.date {
+  position: relative;
+  margin-top: 100%;
+  margin-bottom: 0%;
+  margin-left: 91%;
+  h2 {
+    // width: 4.9vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
 .artist {
   top: 500px;
   left: 0;
     h2 {
       margin-top: -10px;
     }
+}
+#art {
+  top: 70%;
 }
 body {
   background-color: black;
@@ -175,11 +199,34 @@ top: 12%;
   stroke-dasharray: 11;
   stroke-width: 2px;
 }
+.from {
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  border: $border;
+  border-radius: $rad;
+}
+.texture {
+  bottom: 21%;
+  left: 40%;
+  background: url("../images/texture.jpg");
+  background-size: cover;
+  background-position: 0 0;
+  animation: texture steps(29) 3s infinite;
+}
+@keyframes texture {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
 .final_container {
   width: 81.9vw;
   height: 37.5vw;
   position: relative;
-  background: url("../images/mappic.png");
+  background: url("../images/mappic.jpg");
   background-position: center center;
   background-size: cover;
   border-radius: $rad;
@@ -724,6 +771,7 @@ h1 {
     height: 87%;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
   }
   .balance {
     background-image: url("../images/organic.png");
@@ -731,6 +779,7 @@ h1 {
     height: 87%;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
   }
   .child {
     background-image: url("../images/toy.png");
@@ -738,6 +787,7 @@ h1 {
     height: 87%;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
   }
   .dark {
     background-image: url("../images/type.png");
@@ -745,6 +795,7 @@ h1 {
     height: 87%;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
   }
 }
 .gifs {
@@ -765,13 +816,35 @@ h1 {
     border: $border;
     margin-left: 22px;
     margin-right: 22px;
-    background-image: url("../images/portal.png");
     background-size: cover;
     background-position: center center;
+    overflow: hidden;
+
   }
-
 }
-
+.action {
+  position: absolute;
+  background: url(../images/portal_2.jpg);
+  background-size: cover;
+}
+.still {
+  background: url(../images/portal_1.jpg);
+  background-size: cover;
+}
+.portal_seq {
+  margin-left: calc(50% - 56%);
+  width: 112%;
+    height: 100%;
+    // animation: portal_1 steps(49) infinite 4s;
+}
+@keyframes portal_1 {
+  0%{
+    background-position: 0% 0%;
+  }
+  100%{
+    background-position: 100% 0%;
+  }
+}
 .tgth {
   display: block;
   position: relative;
