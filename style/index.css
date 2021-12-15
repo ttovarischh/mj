@@ -4,6 +4,9 @@
   font-style: normal;
   font-weight: 400;
   src: local("Artegra"), url("fonts/Artegra.woff") format("woff"); }
+.mobile {
+  display: none; }
+
 .preloader {
   top: 0;
   left: 0;
@@ -38,7 +41,7 @@ h2 {
   padding-left: 1.39vw;
   padding-right: 1.39vw;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #BCBCBC;
   margin-top: 7px; }
 
@@ -83,7 +86,7 @@ body {
   overflow: auto; }
 
 .portalsection {
-  height: 41vw;
+  height: 610px;
   width: 100%;
   margin-bottom: 60px; }
 
@@ -92,7 +95,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 41vw;
+  height: 610px;
   width: 100%;
   padding-bottom: 20px; }
 
@@ -148,6 +151,7 @@ body {
   margin-left: calc(50% - 274px); }
 
 .realportal_c {
+  position: relative;
   height: 560px;
   width: 726px;
   background-size: contain;
@@ -242,7 +246,7 @@ body {
   100% {
     background-position: 100% 0%; } }
 .final_container {
-  width: 81.9vw;
+  width: 81.7vw;
   height: 37.5vw;
   position: relative;
   background: url("../images/mappic.jpg");
@@ -266,8 +270,8 @@ body {
 .cycle2 {
   pointer-events: none;
   position: absolute;
-  top: 2.5%;
-  left: 26.9%;
+  top: 0%;
+  left: 12.2%;
   height: 559px;
   width: 559px;
   background: url("../images/cycle2.svg");
@@ -284,8 +288,8 @@ body {
 .cycle3 {
   pointer-events: none;
   position: absolute;
-  top: 8%;
-  left: 20%;
+  top: 0%;
+  left: 1%;
   height: 678px;
   width: 672px;
   background: url("../images/cycle3.svg");
@@ -373,7 +377,7 @@ body {
 
 .more {
   font-family: 'Artegra';
-  font-size: 16px;
+  font-size: 1rem;
   color: #ACACAC;
   margin-bottom: 60px; }
 
@@ -438,14 +442,14 @@ h3 {
 
 h3 {
   font-family: Artegra;
-  font-size: 34px;
+  font-size: 2.125rem;
   font-weight: 400;
   line-height: 48px;
   color: #FFFFFF;
   margin-right: 25px; }
   h3 .diff {
     font-family: 'Abhaya Libre', serif;
-    font-size: 55px; }
+    font-size: 3.438rem; }
 
 .question {
   display: flex;
@@ -461,7 +465,7 @@ h3 {
   font-family: Artegra;
   font-style: normal;
   font-weight: normal;
-  font-size: 21px;
+  font-size: 1.313rem;
   line-height: 29px;
   color: #ACACAC;
   margin-left: 60px; }
@@ -470,7 +474,7 @@ h4 {
   font-family: Artegra;
   font-style: normal;
   font-weight: normal;
-  font-size: 21px;
+  font-size: 1.313rem;
   line-height: 29px;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -490,10 +494,11 @@ h4 {
 
 h1 {
   font-family: Artegra;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 25px;
   text-transform: uppercase;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  line-height: 1.6rem; }
 
 .text {
   border: 2px solid white;
@@ -504,7 +509,7 @@ h1 {
   padding-top: 27px;
   padding-bottom: 27px;
   font-family: 'Artegra';
-  font-size: 16px;
+  font-size: 1rem;
   color: white; }
   .text p {
     margin-top: 0; }
@@ -512,10 +517,12 @@ h1 {
     margin-left: 26px;
     width: 29.5vw; }
   .text.b {
-    padding-bottom: 46px;
+    padding-left: 37px;
+    padding-right: 40px;
+    padding-bottom: 27px;
     height: auto;
     margin-top: 26px;
-    font-size: 18px; }
+    font-size: 1.125rem; }
 
 .hor {
   position: relative;
@@ -533,22 +540,25 @@ h1 {
 
 .fresh {
   background: url("../images/fresh.svg");
-  background-position: left; }
+  background-position: left;
+  width: 8vw; }
 
 .alllogos {
   margin-top: 99px;
   margin-bottom: 99px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center; }
 
 .notmain {
   opacity: 0.7;
-  height: 4vw;
-  width: 100%;
+  height: 3.8vw;
   background-size: contain;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  width: 10vw; }
+  .notmain:hover {
+    opacity: 0.5; }
 
 .logobox {
   margin-left: 6vw;
@@ -722,7 +732,8 @@ h1 {
   background-image: url("../images/mech_seq.jpg");
   /* horizontal spritesheet - image from http://preloaders.net */
   background-repeat: repeat-x;
-  animation: mech steps(95) 7s infinite; }
+  animation: mech steps(95) 7s infinite;
+  margin-bottom: 15px; }
 
 #animatedcard2 {
   width: 25vw;
@@ -731,7 +742,8 @@ h1 {
   background-image: url("../images/toy_seq.jpg");
   /* horizontal spritesheet - image from http://preloaders.net */
   background-repeat: repeat-x;
-  animation: mech steps(95) 7s infinite; }
+  animation: mech steps(95) 7s infinite;
+  margin-bottom: 15px; }
 
 #animatedcard3 {
   width: 25vw;
@@ -740,7 +752,8 @@ h1 {
   background-image: url("../images/organic_seq.jpg");
   /* horizontal spritesheet - image from http://preloaders.net */
   background-repeat: repeat-x;
-  animation: mech steps(95) 7s infinite; }
+  animation: mech steps(95) 7s infinite;
+  margin-bottom: 15px; }
 
 #animatedcard4 {
   width: 25vw;
@@ -749,7 +762,8 @@ h1 {
   background-image: url("../images/type_seq.jpg");
   /* horizontal spritesheet - image from http://preloaders.net */
   background-repeat: repeat-x;
-  animation: mech steps(95) 7s infinite; }
+  animation: mech steps(95) 7s infinite;
+  margin-bottom: 15px; }
 
 @keyframes mech {
   0% {
@@ -769,7 +783,6 @@ h1 {
   border-radius: 25px;
   border: 2px solid white;
   width: 70%;
-  height: 414px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -835,6 +848,7 @@ h1 {
     background-size: cover;
     background-position: center center; }
   .gifs .portal {
+    background: white;
     height: 22.42vw;
     width: 43.3%;
     border-radius: 25px;
@@ -846,18 +860,22 @@ h1 {
     overflow: hidden; }
 
 .action {
-  position: absolute;
   background: url(../images/portal_2.jpg);
   background-size: cover; }
+  .action:hover {
+    opacity: 0.5; }
 
 .still {
   background: url(../images/portal_1.jpg);
   background-size: cover; }
+  .still:hover {
+    opacity: 0.5; }
 
 .portal_seq {
   margin-left: calc(50% - 56%);
   width: 112%;
-  height: 100%; }
+  height: 100%;
+  animation: portal_1 steps(49) infinite 4s; }
 
 @keyframes portal_1 {
   0% {
@@ -975,6 +993,122 @@ h1 {
       background-image: url("../images/star.png");
       background-size: contain; }
   .upper_container h2:nth-of-type(2n) {
-    margin-left: 6.04vw; }
+    margin-left: -2.96vw; }
+
+@media screen and (max-width: 479px) {
+  .tgth {
+    display: none; }
+
+  .mobile {
+    display: block;
+    position: relative;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 25px; }
+    .mobile h2 {
+      margin-top: 11%;
+      margin-left: 6%;
+      margin-right: 6%;
+      text-transform: none; }
+
+  .mobile .logobox {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12%; }
+
+  .mobile .alllogos {
+    margin-top: 10%;
+    margin-bottom: 10%; }
+
+  .mobile .footer .upper_second_container {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    margin-left: 6.39vw;
+    margin-right: 7.78vw;
+    height: 100%;
+    align-items: center; }
+
+  .mobile .footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 57px;
+    bottom: -4%; }
+
+  .mobile p {
+    font-size: 11px; }
+
+  .mobile .text.a {
+    margin-left: 26px;
+    width: 58.5vw;
+    margin-top: 4%; }
+
+  .mobile .qa h3 {
+    font-size: 8px;
+    margin-right: 0; }
+
+  .mobile .qa .justline {
+    display: none; }
+
+  .mobile .qa .cross {
+    display: none; }
+
+  .mobile .qa .diff {
+    font-size: 29px; }
+
+  .mobile .qa {
+    margin-right: 7vw;
+    margin-left: 7vw;
+    margin-top: 7vw; }
+
+  .mobile .qa .headercont {
+    padding: 0; }
+
+  .mob_p {
+    overflow: hidden;
+    width: 73vw;
+    height: 23%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin-top: 11%; }
+
+  #mobb {
+    border-radius: 25px;
+    width: 100%;
+    height: 100%; }
+
+  .normal {
+    display: none; }
+
+  body {
+    overflow: auto;
+    cursor: auto;
+    padding: 30px 4vw 30px 4vw; }
+
+  .upper_container .logo {
+    width: 60.32vw;
+    background-color: black;
+    height: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -9px; }
+
+  .upper_container {
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 57px; }
+
+  .upper_container .upper_second_container {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    margin-left: 6.39vw;
+    margin-right: 7.78vw;
+    height: 100%; } }
 
 /*# sourceMappingURL=index.css.map */

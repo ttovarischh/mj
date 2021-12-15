@@ -41,7 +41,7 @@ $(".headercont").click(function() {
   $(".cross").toggleClass("none");
 });
 
-$(".map, .card, a, .qa").hover(function(){
+$(".map, .card, a, .qa, .portal").hover(function(){
   $(".cursor").toggleClass("hoverc");
   $(".cursor").toggleClass("normal");
 });
