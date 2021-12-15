@@ -225,15 +225,17 @@ top: 12%;
   background-size: cover;
   background-position: center center;
 }
-.square2 {
-  position: absolute;
+.maps {
+  border: $border;
+  display: none;
   width: 9.31vw;
   height: 9.31vw;
-  border: $border;
-  background-size: cover;
-  background-position: center center;
+  transform-origin: right bottom;
+  position: absolute;
   top: 0;
   left: 0;
+  background-size: cover;
+  background-position: center center;
 }
 .from {
   position: absolute;
@@ -574,11 +576,38 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-.logobox {
-  margin-left: auto;
-  margin-right: auto;
+.koshta {
+  background: url("../images/koshta.svg");
+}
+.universal {
+  background: url("../images/universal.svg");
+}
+.clt {
+  background: url("../images/clt.svg");
+}
+.fresh {
+  background: url("../images/fresh.svg");
+  background-position: left;
+  // width: 35vw;
+}
+.alllogos {
   margin-top: 99px;
   margin-bottom: 99px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notmain {
+  opacity: 0.7;
+  height: 4vw;
+    width: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.logobox {
+  margin-left: 6vw;
+  margin-right: 6vw;
   background: url("../images/mjsq.svg");
   width: 17.3vw;
   height: 6.53vw;

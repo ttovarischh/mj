@@ -130,17 +130,17 @@ $(document).mousemove(function(e) {
 
   let dead2 = left_dir < half_body_size_x;
   if (dead2) {
-    $(".square2").css('display', 'none');
+    $(".please").css('display', 'none');
  } else {
-   $(".square2").css('display', 'block');
+   $(".please").css('display', 'block');
 
    if (eq9) {
      console.log("eq9");
-     $(".square2").css("background-image", "url('./images/b3.jpg')");
-     $("body").css("background", "red");
+     $(".please").css("background-image", "url('./images/b3.jpg')");
+     // $("body").css("background", "red");
 
 
-     $(".square2").css({
+     $(".please").css({
      'top': '6%',
      });
   }
@@ -156,17 +156,17 @@ $(document).mousemove(function(e) {
    $(".square").css({
    left:e.clientX - 100
    });
-   $(".square2").css({
+   $(".please").css({
    left:e.clientX - 100
    });
-   $(".square2").css('display', 'none');
+   $(".please").css('display', 'none');
 
 
    $(".square").fadeIn();
    if (eq1) {
     console.log("eq1");
   } else if (eq2) {
-    $(".square2").css('display', 'none');
+    $(".please").css('display', 'none');
 
     console.log("eq2");
    $(".square").css("background-image", "url('./images/1.jpg')");
@@ -177,7 +177,7 @@ $(document).mousemove(function(e) {
   } else if (eq3) {
     console.log("eq3");
     $(".square").css("background-image", "url('./images/3.jpg')");
-    $(".square2").css('display', 'none');
+    $(".please").css('display', 'none');
 
     $(".square").css({
     'top': '9%',
@@ -190,7 +190,7 @@ $(document).mousemove(function(e) {
     left:e.clientX - 250
     });
     $(".square").css("background-image", "url('./images/4.jpg')");
-    $(".square2").css('display', 'none');
+    $(".please").css('display', 'none');
 
   }
   else if (eq5) {
@@ -198,35 +198,35 @@ $(document).mousemove(function(e) {
     $(".square").css("background-image", "url('./images/5.jpg')");
     $(".square").css('display', 'none');
     $(".texture").fadeIn();
-    $(".square2").css('display', 'none');
+    $(".please").css('display', 'none');
 
 
   } else if (eq6) {
     console.log("eq6");
     $(".square").hide();
-    $(".square2").css('display', 'none');
+    $(".please").css('display', 'none');
 
 
   }
   else if (eq7) {
     $(".square").css('display', 'none');
-    $(".square2").css('display', 'block');
-    $(".square2").css("background-image", "url('./images/b1.jpg')");
-    $(".square2").css({
+    $(".please").css('display', 'block');
+    $(".please").css("background-image", "url('./images/b1.jpg')");
+    $(".please").css({
     'top': '47%',
     });
   }
   else if (eq8) {
-    $(".square2").css('display', 'block');
+    $(".please").css('display', 'block');
     $(".square").css('display', 'none');
-    $(".square2").css("background-image", "url('./images/b1.jpg')");
-    $(".square2").css({
+    $(".please").css("background-image", "url('./images/b1.jpg')");
+    $(".please").css({
     'top': '47%',
     });
   }
  } else {
   $(".square").css('display', 'none');
-  $(".square2").css('display', 'none');
+  $(".please").css('display', 'none');
 
   // $(".texture").fadeOut();
 }
