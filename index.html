@@ -107,18 +107,21 @@
             </div>
           </div>
 
-          <div class="portalsection none">
+          <div class="portalsection ">
             <div class="portalcontainer">
               <div class="upperangle"></div>
-              <div class="realportal">
+              <div class="realportal_c">
                 <div class="cycle1"></div>
                 <div class="cycle2"></div>
                 <div class="cycle3"></div>
 
+                <div class="realportal">
+                  <div id="scene3d"></canvas></div>
+                </div>
+              <div class="bottomangle"></div>
 
               </div>
-              <div class="bottomangle"></div>
-            </div>
+          </div>
           </div>
 
           <div class="map_c l" id="noma">
@@ -381,6 +384,92 @@
     <div class="cursor normal">
 
     </div>
+
+
+
+<script src="three.js"></script>
+<script type="module" src="GLTFLoader.js"></script>
+<script type="module">
+
+var scene3d = document.getElementById("scene3d");
+  var CANVAS_WIDTH = 850;
+  var CANVAS_HEIGHT = 560;
+
+  var renderer = new THREE.WebGLRenderer();
+  renderer.setClearColor(0x000, 1.0);
+  renderer.setSize(CANVAS_WIDTH, CANVAS_HEIGHT);
+  document.body.appendChild(renderer.domElement);
+
+
+
+   import { GLTFLoader } from './GLTFLoader.js';
+   // import { OBJLoader } from './OBJLoader.js';
+
+   import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/controls/OrbitControls.js'
+
+   var scene = new THREE.Scene();
+   var camera = new THREE.PerspectiveCamera (
+     75,
+     window.innerWidth / window.innerHeight,
+     0.01,
+     1000
+   );
+   // var renderer = new THREE.WebGLRenderer();
+   // renderer.setSize(window.innerWidth, window.innerHeight);
+   // document.body.appendChild(renderer.domElement);
+
+   OrbitControls
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.update();
+controls.enableDamping = true;
+controls.minDistance = 0;
+controls.maxDistance = 100;
+controls.minAzimuthAngle = 0;
+// controls.maxAzimuthAngle = Math.PI - 0.5;
+// controls.maxPolarAngle = Math.PI * 0.02;
+
+
+   var loader = new GLTFLoader();
+
+   var obj;
+   loader.load("final.gltf", function (gltf) {
+     obj = gltf.scene;
+     scene.add(gltf.scene);
+   });
+
+
+
+   // var object;
+   // loader.load("plane.gltf", function (gltf) {
+   //   object = gltf.scene;
+   //   scene.add(gltf.scene);
+   // });
+   //
+   // scene.traverse( child => {
+   //   if (child.material) child.material.metalness = 0;
+   // });
+
+   scene.background = new THREE.Color(0x000000)
+   var light = new THREE.HemisphereLight(0xffffff, 0x000000, 0.1);
+   // var light = new THREE.AmbientLight(0xffffff, 0.5);
+   // const light = new THREE.PointLight(0xff0000, 1, 100 );
+   // light.position = camera.position
+   scene.add(light);
+
+
+
+   camera.position.set(0, 1, 100);
+   function animate() {
+     requestAnimationFrame(animate);
+     renderer.render(scene, camera);
+   }
+   animate();
+
+   scene3d.appendChild(renderer.domElement);
+
+
+</script>
+
 
     <audio id="mysoundclip" preload="auto">
       <source src="./sound.mp3"></source>

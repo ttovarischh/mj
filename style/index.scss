@@ -148,16 +148,29 @@ body {
 .spriteslider, .spriteslider2 {
   cursor: none !important;
 }
+#scene3d {
+  margin-left: -10%;
+}
 .realportal {
-  height: 30vw;
-  width: 37vw;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 554px;
+  height: 558px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: calc(50% - 274px);
+}
+.realportal_c {
+  height: 560px;
+  width: 726px;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .cycle1{
+  pointer-events: none;
   position: absolute;
-  height: 31vw;
-  width: 38vw;
+  height: 560px;
+  width: 726px;
   background: url("../images/cycle1.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -248,16 +261,18 @@ top: 12%;
   }
 }
 .cycle2{
+  pointer-events: none;
+
   position: absolute;
-    top: 14.2%;
-    height: 31vw;
-    width: 38vw;
+  top: 2.5%;
+      left: 26.9%;
+      height: 559px;
+      width: 559px;
   background: url("../images/cycle2.svg");
   background-size: contain;
   background-repeat: no-repeat;
   animation: cycle1 3s ease-in-out infinite;
-  // transform-origin: 52.8% 48.5%;
-  transform-origin: 52.8% 48.3%;
+  transform-origin: 50% 50%;
 
 }
 @keyframes cycle2 {
@@ -269,9 +284,12 @@ top: 12%;
   }
 }
 .cycle3{
+  pointer-events: none;
   position: absolute;
-  height: 31vw;
-  width: 38vw;
+  top: 8%;
+  left: 20%;
+  height: 678px;
+  width: 672px;
   background: url("../images/cycle3.svg");
   background-size: contain;
   background-repeat: no-repeat;
