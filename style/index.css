@@ -79,6 +79,7 @@ body {
   background-color: black;
   padding: 30px 4vw 60px 4vw;
   background-size: auto;
+  cursor: none;
   overflow: auto; }
 
 .portalsection {
@@ -196,14 +197,38 @@ body {
   stroke-dasharray: 11;
   stroke-width: 2px; }
 
+.square {
+  border: 2px solid white;
+  display: none;
+  width: 9.31vw;
+  height: 9.31vw;
+  transform-origin: right bottom;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center; }
+
+.maps {
+  border: 2px solid white;
+  display: none;
+  width: 9.31vw;
+  height: 9.31vw;
+  transform-origin: right bottom;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center; }
+
 .from {
   position: absolute;
   width: 15vw;
   height: 15vw;
-  border: 2px solid white;
-  border-radius: 25px; }
+  border: 2px solid white; }
 
 .texture {
+  pointer-events: none;
   bottom: 21%;
   left: 40%;
   background: url("../images/texture.jpg");
@@ -318,6 +343,7 @@ body {
   margin-bottom: 42px; }
 
 .n {
+  overflow: hidden;
   position: relative;
   margin-bottom: 41px; }
 
@@ -496,11 +522,37 @@ h1 {
   display: flex;
   justify-content: space-between; }
 
-.logobox {
-  margin-left: auto;
-  margin-right: auto;
+.koshta {
+  background: url("../images/koshta.svg"); }
+
+.universal {
+  background: url("../images/universal.svg"); }
+
+.clt {
+  background: url("../images/clt.svg"); }
+
+.fresh {
+  background: url("../images/fresh.svg");
+  background-position: left; }
+
+.alllogos {
   margin-top: 99px;
   margin-bottom: 99px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.notmain {
+  opacity: 0.7;
+  height: 4vw;
+  width: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.logobox {
+  margin-left: 6vw;
+  margin-right: 6vw;
   background: url("../images/mjsq.svg");
   width: 17.3vw;
   height: 6.53vw;
@@ -667,10 +719,43 @@ h1 {
   width: 25vw;
   height: 25vw;
   background-size: cover;
-  background-image: url("../images/group.jpg");
+  background-image: url("../images/mech_seq.jpg");
   /* horizontal spritesheet - image from http://preloaders.net */
-  background-repeat: repeat-x; }
+  background-repeat: repeat-x;
+  animation: mech steps(95) 7s infinite; }
 
+#animatedcard2 {
+  width: 25vw;
+  height: 25vw;
+  background-size: cover;
+  background-image: url("../images/toy_seq.jpg");
+  /* horizontal spritesheet - image from http://preloaders.net */
+  background-repeat: repeat-x;
+  animation: mech steps(95) 7s infinite; }
+
+#animatedcard3 {
+  width: 25vw;
+  height: 25vw;
+  background-size: cover;
+  background-image: url("../images/organic_seq.jpg");
+  /* horizontal spritesheet - image from http://preloaders.net */
+  background-repeat: repeat-x;
+  animation: mech steps(95) 7s infinite; }
+
+#animatedcard4 {
+  width: 25vw;
+  height: 25vw;
+  background-size: cover;
+  background-image: url("../images/type_seq.jpg");
+  /* horizontal spritesheet - image from http://preloaders.net */
+  background-repeat: repeat-x;
+  animation: mech steps(95) 7s infinite; }
+
+@keyframes mech {
+  0% {
+    background-position: 0% 0%; }
+  100% {
+    background-position: 100% 0%; } }
 #spritetarget4 {
   width: 25vw;
   height: 25vw;
@@ -712,8 +797,8 @@ h1 {
     opacity: 0.5; }
   .card .calm {
     background-image: url("../images/mech.png");
-    width: 87%;
-    height: 87%;
+    width: 89%;
+    height: 95%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
@@ -726,15 +811,15 @@ h1 {
     background-position: center; }
   .card .child {
     background-image: url("../images/toy.png");
-    width: 87%;
-    height: 87%;
+    width: 89%;
+    height: 91%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
   .card .dark {
-    background-image: url("../images/type.png");
-    width: 87%;
-    height: 87%;
+    background-image: url("../images/type.jpg");
+    width: 89%;
+    height: 91%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
