@@ -647,7 +647,7 @@ h1 {
   margin-left: 6vw;
   margin-right: 6vw;
   background: url("../images/mjsq.svg");
-  width: 17.3vw;
+  width: 33.4vw;
   height: 6.53vw;
   background-size: cover;
   background-repeat: no-repeat;
@@ -814,7 +814,7 @@ h1 {
   100% {
     background-position: 100% 0%; } }
 #animatedcard {
-  width: 25vw;
+  width: 25.03vw;
   height: 25vw;
   background-size: cover;
   background-image: url("../images/mech_seq.jpg");
@@ -824,7 +824,7 @@ h1 {
   margin-bottom: 15px; }
 
 #animatedcard2 {
-  width: 25vw;
+  width: 25.03vw;
   height: 25vw;
   background-size: cover;
   background-image: url("../images/toy_seq.jpg");
@@ -834,7 +834,7 @@ h1 {
   margin-bottom: 15px; }
 
 #animatedcard3 {
-  width: 25vw;
+  width: 25.03vw;
   height: 25vw;
   background-size: cover;
   background-image: url("../images/organic_seq.jpg");
@@ -844,7 +844,7 @@ h1 {
   margin-bottom: 15px; }
 
 #animatedcard4 {
-  width: 25vw;
+  width: 25.03vw;
   height: 25vw;
   background-size: cover;
   background-image: url("../images/type_seq.jpg");
@@ -1121,6 +1121,7 @@ h1 {
     border: 2px solid white;
     border-radius: 25px; }
     .mobile h2 {
+      font-size: 12px;
       margin-top: 11%;
       text-transform: none; }
 
@@ -1241,8 +1242,9 @@ h1 {
     height: 100%; }
 
   .mobile #animatedcard, #animatedcard2, #animatedcard3, #animatedcard4 {
-    width: 30vw;
-    height: 30vw; }
+    width: 30.3vw;
+    height: 30vw;
+    margin-top: 2%; }
 
   .mobile .zoom {
     width: auto; }
@@ -1275,8 +1277,8 @@ h1 {
     height: 40px; }
 
   .mobile .two {
-    width: 36vw;
     height: 5vw;
+    width: 33vw;
     background-image: url(../images/dots2.svg);
     background-repeat: no-repeat;
     margin-top: 21px;
