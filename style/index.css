@@ -1203,7 +1203,8 @@ h1 {
     margin-right: auto;
     border: 2px solid white;
     border-radius: 25px;
-    margin-top: 11%; }
+    margin-top: 11%;
+    -webkit-mask-image: -webkit-radial-gradient(white, black); }
 
   #mobb {
     width: 100%;
