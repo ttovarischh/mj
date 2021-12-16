@@ -269,6 +269,8 @@ body {
   border: 2px solid white; }
 
 .texture {
+  transition: opacity 0.5s ease;
+  opacity: 0;
   pointer-events: none;
   bottom: 21%;
   left: 40%;
@@ -365,7 +367,11 @@ body {
   margin-top: 41px;
   margin-bottom: 32px; }
 
+html {
+  scroll-behavior: smooth; }
+
 .player_container {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   position: relative;
   overflow: hidden;
   border-radius: 25px;
@@ -885,7 +891,6 @@ h1 {
     background-size: cover;
     background-position: center center; }
   .gifs .portal {
-    background: white;
     height: 22.42vw;
     width: 43.3%;
     border-radius: 25px;
@@ -894,24 +899,27 @@ h1 {
     margin-right: 22px;
     background-size: cover;
     background-position: center center;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black); }
 
 .action {
+  transition: all 0.5s ease;
   background: url(../images/portal_2.jpg);
   background-size: cover; }
   .action:hover {
     opacity: 0.5; }
 
 .still {
+  transition: all 0.5s ease;
   background: url(../images/portal_1.jpg);
   background-size: cover; }
   .still:hover {
     opacity: 0.5; }
 
 .portal_seq {
-  margin-left: calc(50% - 56%);
-  width: 112%;
-  height: 100%;
+  margin-left: calc(50% - 20.7vw);
+  width: 40.13vw;
+  height: 22.5vw;
   animation: portal_1 steps(49) infinite 4s; }
 
 @keyframes portal_1 {
