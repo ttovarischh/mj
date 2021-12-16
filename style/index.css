@@ -1207,7 +1207,8 @@ h1 {
 
   #mobb {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    border-radius: 25px; }
 
   .normal {
     display: none; }
