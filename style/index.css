@@ -25,8 +25,11 @@
 .dotsabsolute {
   position: relative;
   margin-left: 5px;
-  margin-top: 4px;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 1.1rem;
+  display: flex;
+  align-content: flex-end;
+  align-items: flex-end; }
 
 .dots {
   width: 18px;
@@ -224,6 +227,16 @@ body {
 #path, #path-2 {
   stroke-dasharray: 11;
   stroke-width: 2px; }
+
+.pain {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 9.31vw;
+  height: 9.31vw;
+  border: 2px solid white;
+  background-size: cover;
+  background-position: center center; }
 
 .square {
   border: 2px solid white;

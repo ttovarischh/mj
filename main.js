@@ -1,10 +1,10 @@
 function getBgUrl(el) {
     var bg = "";
-    if (el.currentStyle) { // IE
+    if (el.currentStyle) {
         bg = el.currentStyle.backgroundImage;
-    } else if (document.defaultView && document.defaultView.getComputedStyle) { // Firefox
+    } else if (document.defaultView && document.defaultView.getComputedStyle) {
         bg = document.defaultView.getComputedStyle(el, "").backgroundImage;
-    } else { // try and get inline style
+    } else {
         bg = el.style.backgroundImage;
     }
     return bg.replace(/url\(['"]?(.*?)['"]?\)/i, "$1");
@@ -13,12 +13,10 @@ function getBgUrl(el) {
 var image = document.createElement('img');
 image.src = getBgUrl(document.getElementById('spritetarget'));
 image.onload = function () {
-  // $(".preloader").addClass("none");
-      // $(document.body).removeClass("prebody");
     setTimeout(function()
     {   $(".preloader").addClass("none");
         $(document.body).removeClass("prebody");}
-    , 3000);
+    , 1000);
 };
 
 $(".portal").click(function() {
@@ -99,10 +97,6 @@ $( ".type" ).click(function() {
   }
 });
 
-  $( ".texture" ).click(function() {
-    $('audio')[0].play();
-  });
-
 
 $(document).mousemove(function(e) {
   let body_size_x = $(".final_container").width();
@@ -120,54 +114,50 @@ $(document).mousemove(function(e) {
   let eq4 = left_dir < parseInt (kill * 8) ;
   let eq5 = left_dir < parseInt (kill * 9) ;
   let eq6 = left_dir < parseInt (kill * 10) ;
-  let eq7 = left_dir > parseInt (kill * 10) ;
-  let eq8 = left_dir < parseInt (kill * 11) ;
-  let eq9 = left_dir > parseInt (q_body_size_x * 3) ;
-  let e10 = left_dir > parseInt (q_body_size_x * 3.5) ;
+  let eq7 = left_dir < parseInt (kill * 11) ;
+  let eq8 = left_dir < parseInt (kill * 12) ;
+  let eq9 = left_dir < parseInt (kill * 13) ;
+  let eq10 = left_dir < parseInt (kill * 14) ;
+  let eq11 = left_dir < parseInt (kill * 15) ;
+  let eq12 = left_dir < parseInt (kill * 16) ;
+  let eq13 = left_dir < parseInt (kill * 17) ;
+  let eq14 = left_dir < parseInt (kill * 18) ;
+
+
+
+
+
+
 
 
 
 
   let dead2 = left_dir < half_body_size_x;
   if (dead2) {
-    $(".please").css('display', 'none');
+    $(".pain").css('display', 'none');
  } else {
-   $(".please").css('display', 'block');
+   $(".pain").css('display', 'block');
+ }
 
-   if (eq9) {
-     console.log("eq9");
-     $(".please").css("background-image", "url('./images/b3.jpg')");
-     // $("body").css("background", "red");
-
-
-     $(".please").css({
-     'top': '6%',
-     });
+ let deadone = left_dir > half_body_size_x;
+ if (deadone) {
+   $(".square").css('display', 'none');
+  } else {
+    $(".square").css('display', 'block');
   }
- }
 
-  if (eq1) {
-    $(".square").css('display', 'none');
- } else {
-   $(".square").css('display', 'block');
- }
 
  if ($('.final_container').is(":hover")) {
    $(".square").css({
    left:e.clientX - 100
    });
-   $(".please").css({
+   $(".pain").css({
    left:e.clientX - 100
    });
-   $(".please").css('display', 'none');
 
-
-   $(".square").fadeIn();
    if (eq1) {
     console.log("eq1");
   } else if (eq2) {
-    $(".please").css('display', 'none');
-
     console.log("eq2");
    $(".square").css("background-image", "url('./images/1.jpg')");
    $(".square").css({
@@ -175,10 +165,9 @@ $(document).mousemove(function(e) {
    left:e.clientX - 100
    });
   } else if (eq3) {
+    $(".texture").fadeOut();
     console.log("eq3");
     $(".square").css("background-image", "url('./images/3.jpg')");
-    $(".please").css('display', 'none');
-
     $(".square").css({
     'top': '9%',
     left:e.clientX - 280
@@ -190,46 +179,93 @@ $(document).mousemove(function(e) {
     left:e.clientX - 250
     });
     $(".square").css("background-image", "url('./images/4.jpg')");
-    $(".please").css('display', 'none');
-
   }
   else if (eq5) {
     console.log("eq5");
     $(".square").css("background-image", "url('./images/5.jpg')");
-    $(".square").css('display', 'none');
+    $(".pain").css("background-image", "url('./images/b1.jpg')");
+    $(".square").css({
+    'top': '46%',
+    left:e.clientX - 100
+    });
     $(".texture").fadeIn();
-    $(".please").css('display', 'none');
-
-
+    $(".pain").css({
+    'top': '34%',
+    left:e.clientX + 100
+    });
   } else if (eq6) {
     console.log("eq6");
-    $(".square").hide();
-    $(".please").css('display', 'none');
-
-
+    $(".pain").css({
+    'top': '34%',
+    left:e.clientX + 100
+    });
   }
   else if (eq7) {
-    $(".square").css('display', 'none');
-    $(".please").css('display', 'block');
-    $(".please").css("background-image", "url('./images/b1.jpg')");
-    $(".please").css({
-    'top': '47%',
+    $(".texture").fadeOut();
+    $(".pain").css("background-image", "url('./images/b1.jpg')");
+    console.log("eq7");
+    $(".pain").css({
+    'top': '34%',
+    left:e.clientX + 100
     });
   }
   else if (eq8) {
-    $(".please").css('display', 'block');
-    $(".square").css('display', 'none');
-    $(".please").css("background-image", "url('./images/b1.jpg')");
-    $(".please").css({
-    'top': '47%',
+    // $(".pain").css("background-image", "url('./images/b2.jpg')");
+    $(".pain").css("display", "none");
+
+    console.log("eq8");
+    $(".pain").css({
+    'top': '17%'
     });
+  }
+  else if (eq9) {
+    $(".pain").css("background-image", "url('./images/b2.jpg')");
+    console.log("eq9");
+    $(".pain").css({
+    'top': '34%'
+    });
+  }
+  else if (eq10) {
+    $(".pain").css("background-image", "url('./images/b4.jpg')");
+    console.log("eq10");
+    $(".pain").css({
+    'top': '7%'
+    });
+  }
+  else if (eq11) {
+    console.log("eq11");
+    $(".pain").css('display', 'none');
+  }
+  else if (eq12) {
+    console.log("eq12");
+    $(".pain").css("background-image", "url('./images/b5.jpg')");
+    $(".pain").css({
+    'top': '34%',
+    left:e.clientX - 300
+    });
+  }
+  else if (eq13) {
+    $(".pain").css({
+    'top': '34%',
+    left:e.clientX - 300
+    });
+  }
+  else if (eq14) {
+    $(".pain").css('display', 'none');
   }
  } else {
   $(".square").css('display', 'none');
-  $(".please").css('display', 'none');
-
-  // $(".texture").fadeOut();
+  $(".pain").css('display', 'none');
 }
+
+// else if (eq9) {
+//      console.log("eq9");
+//      $(".pain").toggleClass("ba");
+//      $(".pain").toggleClass("bb");
+//      $(".pain").css({
+//      'top': '6%',
+//      });
+//   }
 
 
 

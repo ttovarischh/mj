@@ -7,7 +7,6 @@
     <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="jquery/jquery-ui.min.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script src="jquery/jquery-ui.js"></script>
 
     <script>
@@ -123,13 +122,15 @@
 
               <div class="square"></div>
               <div class="from texture none"></div>
-              <div class="maps"></div>
 
 
 
             </div>
             <div class="text b">
               <p>Одним из&nbsp;ключевых элементов, важных для понимания видео, становится само пространство, в&nbsp;котором существуют герои. Мы&nbsp;наблюдаем отрезки из&nbsp;пройденных ими путей, но&nbsp;лишь посмотрев на&nbsp;карту, понимаем значение этой доороги для персонажей. Их&nbsp;пути не&nbsp;совсем линейны: взрослый перепроходит один и&nbsp;тот&nbsp;же участок раз за&nbsp;разом. Его дорога длинная и&nbsp;сложная. Мальчику, наоборот стоит лишь сделать&nbsp;&mdash; но&nbsp;это и&nbsp;пугает. В&nbsp;конечном итоге оба героя оказываются в&nbsp;точке назначения в&nbsp;одно и&nbsp;то&nbsp;же время. Результат одинаков, но&nbsp;пути, пройденные ими, различаются кардинально.</p>
+            </div>
+            <div class="pain ba">
+
             </div>
           </div>
 
@@ -344,14 +345,6 @@
               </a>
             </div>
 
-
-
-          <!-- <div class="killme">
-            <svg width="1025" height="332" viewBox="0 0 1025 332" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path id="path" d="M0.5 227C293 216 27 -11.9999 453.5 7.00007V326H702C700 232.333 716.7 56.6 799.5 103C813.5 181.5 840.5 347 889 255.5C937.5 164 970.5 115.5 1002 181.5C1027.2 234.3 1018.83 252.833 1011.5 255.5" stroke="white" stroke-width="11"/>
-            <rect id="rect" width="50" height="50" fill="#88ce03">
-            </svg>
-          </div> -->
           </div>
         </div>
 
@@ -438,7 +431,6 @@ var scene3d = document.getElementById("scene3d");
 
 
    import { GLTFLoader } from './GLTFLoader.js';
-   // import { OBJLoader } from './OBJLoader.js';
 
    import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/controls/OrbitControls.js'
 
@@ -449,9 +441,6 @@ var scene3d = document.getElementById("scene3d");
      0.01,
      1000
    );
-   // var renderer = new THREE.WebGLRenderer();
-   // renderer.setSize(window.innerWidth, window.innerHeight);
-   // document.body.appendChild(renderer.domElement);
 
    OrbitControls
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -460,8 +449,6 @@ controls.enableDamping = true;
 controls.minDistance = 0;
 controls.maxDistance = 100;
 controls.minAzimuthAngle = 0;
-// controls.maxAzimuthAngle = Math.PI - 0.5;
-// controls.maxPolarAngle = Math.PI * 0.02;
 
 
    var loader = new GLTFLoader();
@@ -472,23 +459,8 @@ controls.minAzimuthAngle = 0;
      scene.add(gltf.scene);
    });
 
-
-
-   // var object;
-   // loader.load("plane.gltf", function (gltf) {
-   //   object = gltf.scene;
-   //   scene.add(gltf.scene);
-   // });
-   //
-   // scene.traverse( child => {
-   //   if (child.material) child.material.metalness = 0;
-   // });
-
    scene.background = new THREE.Color(0x000000)
    var light = new THREE.HemisphereLight(0xffffff, 0x000000, 0.14);
-   // var light = new THREE.AmbientLight(0xffffff, 0.5);
-   // const light = new THREE.PointLight(0xff0000, 1, 100 );
-   // light.position = camera.position
    scene.add(light);
 
 
@@ -506,11 +478,6 @@ controls.minAzimuthAngle = 0;
 </script>
 
 
-    <audio id="mysoundclip" preload="auto">
-      <source src="./sound.mp3"></source>
-  </audio>
-
-
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js'></script><script  src="./drag.js"></script>
 
@@ -523,20 +490,6 @@ controls.minAzimuthAngle = 0;
     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js'></script>
     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js'></script><script  src="./mapping.js"></script>
 
-  <!-- <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script><script  src="./script.js"></script> -->
-<!-- script -->
-<!-- <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js'></script> -->
-<!-- <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js?r=12'></script> -->
-<!-- <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin3.min.js'></script> -->
-<!-- <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrambleTextPlugin3.min.js'></script> -->
-<!-- <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js'></script> -->
-<!-- <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/PixiPlugin3.min.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomEase3.min.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomBounce3.min.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomWiggle3.min.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Draggable3.min.js'></script><script  src="./draggable.js"></script> -->
   </body>
 
 </html>
