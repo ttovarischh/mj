@@ -453,12 +453,12 @@ h3 {
   width: 55px;
   height: 57px; }
 
-.unclicked:hover, .download:hover {
+.unclicked:hover, .download:hover, .buy:hover {
   transition: all 0.5s ease;
   background-color: white; }
-  .unclicked:hover h3, .download:hover h3 {
+  .unclicked:hover h3, .download:hover h3, .buy:hover h3 {
     color: black; }
-  .unclicked:hover .unclickedstar, .download:hover .unclickedstar {
+  .unclicked:hover .unclickedstar, .download:hover .unclickedstar, .buy:hover .unclickedstar {
     transition: all 2s ease;
     background: url("../images/starblack.png");
     width: 113px;
@@ -466,6 +466,19 @@ h3 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain; }
+
+.buy:hover .star {
+  transition: all 2s ease;
+  background: url("../images/starblack.png");
+  width: 113px;
+  height: 113px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; }
+
+#kon {
+  color: white;
+  text-decoration: underline; }
 
 .headercont {
   transition: all 0.5s ease;
@@ -479,6 +492,33 @@ h3 {
     background-position: center center;
     background-image: url(../images/star.png);
     background-size: contain; }
+
+.shop {
+  transition: all 2s ease;
+  background: url("../images/starblack.png");
+  width: 113px;
+  height: 113px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; }
+
+.buy {
+  transition: all 0.5s ease;
+  display: flex;
+  padding: 11px 6vw 11px 6vw;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 25px;
+  margin-top: 30px; }
+  .buy .star {
+    transition: all 2s ease;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../images/star.png);
+    background-size: contain;
+    width: 113px;
+    height: 113px; }
 
 #one {
   margin-right: 40px; }
@@ -768,6 +808,11 @@ h1 {
   /* horizontal spritesheet - image from http://preloaders.net */
   background-repeat: repeat-x; }
 
+@keyframes boy {
+  0% {
+    background-position: 0% 0%; }
+  100% {
+    background-position: 100% 0%; } }
 #animatedcard {
   width: 25vw;
   height: 25vw;
@@ -918,7 +963,7 @@ h1 {
 
 .portal_seq {
   margin-left: calc(50% - 20.7vw);
-  width: 40.13vw;
+  width: 39.98vw;
   height: 22.5vw;
   animation: portal_1 steps(49) infinite 4s; }
 

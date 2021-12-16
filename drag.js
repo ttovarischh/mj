@@ -6,7 +6,7 @@ document.body.appendChild(spriteslider);
 spriteslider.slider = document.getElementById('spriteslider');
 spriteslider.sprite = document.getElementById('spritetarget');
 spriteslider.spritesize = clientWidth;
-spriteslider.spritecount = 37;
+spriteslider.spritecount = 40;
 spriteslider.pixelsperincrement = 5;
 spriteslider.multiplier = spriteslider.lastmultiplier = 0;
 
@@ -55,7 +55,7 @@ document.body.appendChild(spriteslider2);
 spriteslider2.slider = document.getElementById('spriteslider2');
 spriteslider2.sprite = document.getElementById('spritetarget2');
 spriteslider2.spritesize = clientWidth2;
-spriteslider2.spritecount = 37;
+spriteslider2.spritecount = 40;
 spriteslider2.pixelsperincrement = 5;
 spriteslider2.multiplier = spriteslider2.lastmultiplier = 0;
 

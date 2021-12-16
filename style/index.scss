@@ -500,7 +500,7 @@ h3 {
   width: 55px;
   height: 57px;
 }
-.unclicked:hover, .download:hover {
+.unclicked:hover, .download:hover, .buy:hover {
     transition: all 0.5s ease;
     background-color: white;
     h3 {
@@ -516,6 +516,19 @@ h3 {
       background-size: contain;
     }
   }
+.buy:hover .star {
+    transition: all 2s ease;
+    background: url("../images/starblack.png");
+    width: 113px;
+    height: 113px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+#kon {
+  color: white;
+  text-decoration: underline;
+}
 .headercont {
   transition: all 0.5s ease;
   display: flex;
@@ -528,6 +541,34 @@ h3 {
     background-position: center center;
     background-image: url(../images/star.png);
     background-size: contain;
+  }
+}
+.shop {
+  transition: all 2s ease;
+  background: url("../images/starblack.png");
+  width: 113px;
+  height: 113px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.buy {
+  transition: all 0.5s ease;
+  display: flex;
+  padding: 11px 6vw 11px 6vw;
+  justify-content: space-between;
+  align-items: center;
+  border: $border;
+  border-radius: $rad;
+  margin-top: 30px;
+  .star {
+    transition: all 2s ease;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../images/star.png);
+    background-size: contain;
+    width: 113px;
+    height: 113px;
   }
 }
 #one {
@@ -842,7 +883,17 @@ h1 {
   background-size: cover;
   background-image: url("../images/boyseq.png"); /* horizontal spritesheet - image from http://preloaders.net */
   background-repeat: repeat-x;
+  // animation: steps(39) boy 4s infinite;
 }
+@keyframes boy {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
 #animatedcard {
   width: 25vw;
   height: 25vw;
@@ -1007,7 +1058,7 @@ h1 {
 }
 .portal_seq {
     margin-left: calc(50% - 20.7vw);
-    width: 40.13vw;
+    width: 39.98vw;
     height: 22.5vw;
     animation: portal_1 steps(49) infinite 4s;
 }
