@@ -412,7 +412,9 @@
 
     </div>
     <div class="preloader">
-      <h2>Загрузка...</h2>
+      <h2>Загрузка</h2><div class="dotsabsolute">
+        <div class="dots"></div>
+      </div>
     </div>
     <div class="cursor normal">
 
@@ -483,7 +485,7 @@ controls.minAzimuthAngle = 0;
    // });
 
    scene.background = new THREE.Color(0x000000)
-   var light = new THREE.HemisphereLight(0xffffff, 0x000000, 0.1);
+   var light = new THREE.HemisphereLight(0xffffff, 0x000000, 0.14);
    // var light = new THREE.AmbientLight(0xffffff, 0.5);
    // const light = new THREE.PointLight(0xff0000, 1, 100 );
    // light.position = camera.position
