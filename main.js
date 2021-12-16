@@ -28,7 +28,7 @@ $(".portal").click(function() {
         var y = $(window).scrollTop();
         $(".portalsection").slideToggle("none");
         if ($(".portal_seq").hasClass("action")) {
-          $(window).scrollTop(y+(docHeight / 8));
+          $(window).scrollTop(y+(docHeight / 10));
         }
     }
   , 1000);
